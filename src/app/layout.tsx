@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { type_second } from "@/functions/fonts";
 import Header from "@/components/Header/header";
+import Footer from "@/components/Footer/footer";
 
 export const metadata: Metadata = {
   title: "Dogs NextJS",
@@ -15,10 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={type_second.variable} lang="pt-BR">
-      <body>
-        <Header />
-        {children}
+    <html lang="pt-BR">
+      <body className={type_second.variable}>
+        <div className="App">
+          <Header />
+          <main className="AppBody">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
