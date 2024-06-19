@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { type_second } from "@/functions/fonts";
 
 export const metadata: Metadata = {
   title: "Dogs NextJS",
@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body >{children}</body>
+    <html className={type_second.variable} lang="pt-BR">
+      <body>{children}</body>
     </html>
   );
 }
