@@ -19,13 +19,13 @@ export function USER_GET(token) {
   };
 }
 
-export function USER_POST(body) {
+export function USER_POST() {
   return {
     url: API_URL + "/api/user",
   };
 }
 
-export function PHOTO_POST(formData, token) {
+export function PHOTO_POST() {
   return {
     url: API_URL + "/api/photo",
   };
