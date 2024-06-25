@@ -13,7 +13,7 @@ export function TOKEN_VALIDATE_POST(token) {
   };
 }
 
-export function USER_GET(token) {
+export function USER_GET() {
   return {
     url: API_URL + "/api/user",
   };
