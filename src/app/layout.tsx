@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Rede social para cachorros.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -29,5 +29,5 @@ export default function RootLayout({
           </div>
         </UserContextProvider>
       </body>
-    </html>
+    </html>)
 }
