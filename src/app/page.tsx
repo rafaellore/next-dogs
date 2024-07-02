@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <section className="container mainContainer">
-      <Feed photos={data} />
+      {data?.ok && <Feed photos={data.data} />}
     </section>
   );
 }
