@@ -3,6 +3,8 @@
 import photosGet, { Photo } from '@/actions/PhotosGet';
 import FeedPhotos from './FeedPhotos';
 import React from 'react';
+import Loading from '../Loading/loading';
+import styles from './Feed.module.css';
 
 export default function Feed({
   photos,
@@ -68,7 +70,9 @@ export default function Feed({
   return (
     <div>
       <FeedPhotos photos={photosFeed} />
-      {loading && <p>Carregando...</p>}
+      <div className={styles.loadingWrapper}>
+        {infinite ? loading && <Loading /> : <p>Não existem mais postagens.</p>}
+      </div>
     </div>
   );
 }
