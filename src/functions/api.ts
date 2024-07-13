@@ -43,7 +43,7 @@ export function PHOTO_GET(id) {
   };
 }
 
-export function COMMENT_POST(id, body) {
+export function COMMENT_POST(id: string) {
   return {
     url: `${API_URL}/api/comment/${id}`,
   };

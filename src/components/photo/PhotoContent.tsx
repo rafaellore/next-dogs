@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PhotoData } from '@/actions/photo-get';
 import { useUser } from '@/context/userContext';
+import PhotoComments from './PhotoComments';
 
 const PhotoContent = ({
   data,
@@ -47,7 +48,7 @@ const PhotoContent = ({
         </div>
       </div>
 
-      {/* <PhotoComments single={single} id={photo.id} comments={comments} /> */}
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   );
 };
