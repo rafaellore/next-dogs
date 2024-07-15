@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './feed.module.css';
+import styles from './Feed.module.css';
 import { Photo } from '@/actions/PhotosGet';
 
 export default function FeedPhotos({ photos }: { photos: Photo[] }) {
